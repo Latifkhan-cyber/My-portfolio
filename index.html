@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latif Khan | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for contact/social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= Navbar ================= -->
+
+    <header>
+
+        <h2 class="logo">Latif Khan</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+        </nav>
+
+    </header>
+
+    <!-- ================= Hero Section ================= -->
+
+    <section class="hero" id="home">
+
+        <!-- Left Side -->
+
+        <div class="left">
+
+            <p class="small-title">
+                FULL STACK DEVELOPER
+            </p>
+
+            <h1>
+                Hi, I'm <br>
+                <span>Latif Khan</span>
+            </h1>
+
+            <p class="description">
+                I build modern, responsive and user-friendly websites using
+                HTML, CSS, JavaScript, React, Node.js, Firebase and MySQL.
+                Final-year Computer Science student passionate about the MERN
+                stack and AI-assisted development.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn1">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="btn2">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="right">
+
+            <div class="glass-card">
+
+                <h2>What I Do</h2>
+
+                <ul>
+                    <li>Responsive Website Design</li>
+                    <li>Frontend Development</li>
+                    <li>MERN Stack Development</li>
+                    <li>Django & MySQL Backends</li>
+                    <li>Firebase Integration</li>
+                    <li>UI / UX Design</li>
+                    <li>API Integration</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= About Section ================= -->
+
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <p class="small-title">ABOUT ME</p>
+                <h2>Computer Science Student & Full Stack Developer</h2>
+                <p class="about-desc">
+                    I'm Latif Khan, a final-year BS Computer Science student at
+                    Edwardes College Peshawar (2022–2026). I specialize in the
+                    MERN stack and Django, building clean, responsive web
+                    applications. I also use AI-assisted development to ship
+                    features faster and more reliably.
+                </p>
+
+                <div class="about-facts">
+                    <div class="fact">
+                        <span class="fact-num">2026</span>
+                        <span class="fact-label">Graduating</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-num">MERN</span>
+                        <span class="fact-label">Stack</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-num">Django</span>
+                        <span class="fact-label">+ MySQL</span>
+                    </div>
+                </div>
+
+                <div class="about-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Nowshera Akora Khattak, Pakistan</p>
+                    <p><i class="fas fa-envelope"></i> teefa9263@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 03140972728</p>
+                </div>
+            </div>
+
+            <div class="about-skills">
+                <h3>Technical Skills</h3>
+                <div class="skill-row">
+                    <span class="skill-chip">HTML5</span>
+                    <span class="skill-chip">CSS3</span>
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">React</span>
+                    <span class="skill-chip">Node.js</span>
+                    <span class="skill-chip">MongoDB</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-chip">Django</span>
+                    <span class="skill-chip">MySQL</span>
+                    <span class="skill-chip">MERN Stack</span>
+                    <span class="skill-chip">Firebase</span>
+                    <span class="skill-chip">Git / GitHub</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-chip">AI-Assisted Development</span>
+                    <span class="skill-chip">Responsive Design</span>
+                    <span class="skill-chip">UI / UX</span>
+                    <span class="skill-chip">API Integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Projects Section ================= -->
+
+    <section class="projects" id="projects">
+        <div class="projects-inner">
+            <p class="small-title">PROJECTS</p>
+            <h2>Things I've Built</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="project-badge">Final Year Project</div>
+                    <h3>MediQueue — Healthcare Management System</h3>
+                    <p>
+                        Clinic management system built with Django + MySQL.
+                        Role-based access for admin, doctor and receptionist,
+                        patient queueing, lab test ordering, and notifications.
+                    </p>
+                    <div class="project-tags">
+                        <span>Django</span><span>MySQL</span><span>Python</span>
+                    </div>
+                    <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">Web App</div>
+                    <h3>Real Estate Agency Site</h3>
+                    <p>
+                        Premium real estate landing page with property listings,
+                        services, pricing and contact form. Built with HTML, CSS
+                        and vanilla JavaScript.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">Web App</div>
+                    <h3>Furniture Store</h3>
+                    <p>
+                        Modern furniture e-commerce storefront with category
+                        browse, product showcase and newsletter signup.
+                        Black + orange-yellow theme.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Contact Section ================= -->
+
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <p class="small-title">GET IN TOUCH</p>
+            <h2>Contact & Location</h2>
+            <p class="contact-sub">Available for freelance, internships and full-time roles.</p>
+
+            <div class="contact-grid">
+
+                <!-- Left: details + map -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nowshera Akora Khattak, Pakistan</p>
+                            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Nowshera+Akora+Khattak+Pakistan" target="_blank">
+                                Open in Google Maps <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:teefa9263@gmail.com">teefa9263@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:03140972728">03140972728</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/Latifkhan-cyber" target="_blank">github.com/Latifkhan-cyber</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/latif-khan" target="_blank">linkedin.com/in/latif-khan</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Google Map (shareable location) -->
+                    <div class="map-embed">
+                        <iframe
+                            title="My Location"
+                            src="https://www.google.com/maps?q=Nowshera+Akora+Khattak+Pakistan&output=embed"
+                            width="100%" height="260" style="border:0; border-radius:16px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right: message form -->
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! I will get back to you soon.'); this.reset();">
+                    <div class="form-group">
+                        <label for="cname">Your Name</label>
+                        <input type="text" id="cname" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="cemail">Email</label>
+                        <input type="email" id="cemail" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="cmsg">Message</label>
+                        <textarea id="cmsg" rows="5" required placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn1">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+
+    <footer class="site-footer">
+        <p>© 2026 Latif Khan. Built with HTML, CSS & JavaScript.</p>
+        <div class="footer-social">
+            <a href="https://github.com/Latifkhan-cyber" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/latif-khan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:teefa9263@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- ================= JavaScript ================= -->
+    <!-- Our interactivity file (smooth scroll, form, navbar) -->
+    <script src="script.js"></script>
+
+</body>
+</html>
