@@ -1,321 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latif Khan | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latif Khan | Full Stack Developer</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Poppins + Montserrat (same as Biohub) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome for contact/social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="home-designer">
 
-    <!-- ================= Navbar ================= -->
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <span id="preloader-text">
+        <span>L</span><span>a</span><span>t</span><span>i</span><span>f</span>
+        <span>&nbsp;</span>
+        <span>K</span><span>h</span><span>a</span><span>n</span>
+      </span>
+    </div>
+  </div>
 
-    <header>
 
-        <h2 class="logo">Latif Khan</h2>
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="tmp-header">
+    <div class="header-container">
+      <a href="#home" class="header-logo">Latif<span>.</span></a>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+      <!-- Desktop Nav -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
 
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
-        </nav>
+      <a href="#contact" class="tmp-btn hire-btn">Hire Me</a>
 
-    </header>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- ================= Hero Section ================= -->
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
 
-    <section class="hero" id="home">
 
-        <!-- Left Side -->
+  <!-- ===== HERO / BANNER ===== -->
+  <section class="banner-style-2" id="home">
+    <!-- Background shapes -->
+    <div class="banner-shape">
+      <span class="shape-glow shape-glow--left"></span>
+      <span class="shape-glow shape-glow--right"></span>
+    </div>
 
-        <div class="left">
+    <div class="banner-container">
+      <!-- Left: content -->
+      <div class="banner-content" data-aos="fade-right">
+        <span class="badge-subtitle">
+          <i class="fas fa-code"></i> Full Stack Developer
+        </span>
 
-            <p class="small-title">
-                FULL STACK DEVELOPER
-            </p>
+        <h1 class="banner-title">
+          Hi, I'm<br />
+          <span class="highlight">Latif</span>
+          <span class="stroke-text"> Khan</span>
+        </h1>
 
-            <h1>
-                Hi, I'm <br>
-                <span>Latif Khan</span>
-            </h1>
+        <p class="banner-desc">
+          With a strong foundation in full-stack development and a keen eye for design,
+          I specialize in creating interactive, responsive, and scalable web applications.
+        </p>
 
-            <p class="description">
-                I build modern, responsive and user-friendly websites using
-                HTML, CSS, JavaScript, React, Node.js, Firebase and MySQL.
-                Final-year Computer Science student passionate about the MERN
-                stack and AI-assisted development.
-            </p>
+        <!-- Typed roles -->
+        <p class="typed-line">
+          I build&nbsp;<span id="typed-text" class="typed-highlight"></span><span class="typed-cursor">|</span>
+        </p>
 
-            <div class="buttons">
+        <div class="banner-buttons">
+          <a href="#projects" class="tmp-btn">View Projects <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="tmp-btn btn-border">Contact Me</a>
+          <a href="Image/latif_khan_cv.pdf.pdf" download="Latif-Khan-CV.pdf" class="tmp-btn btn-cv">
+            Download CV <i class="fas fa-file-download"></i>
+          </a>
+        </div>
 
-                <a href="#projects" class="btn1">
-                    View Projects
-                </a>
+        <!-- Social links -->
+        <div class="banner-social">
+          <a href="https://github.com/Latifkhan-cyber" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/latif-khan" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:teefa9263@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
 
-                <a href="#contact" class="btn2">
-                    Contact Me
-                </a>
+      <!-- Right: avatar image area -->
+      <div class="banner-image" data-aos="fade-left">
+        <div class="banner-image-shape"></div>
+        <div class="banner-image-shape-2"></div>
+        <div class="banner-avatar">
+          <img src="Image/latifkhan image.jpg" alt="Latif Khan" />
+        </div>
+        <!-- Floating badge -->
+        <div class="float-badge float-badge--tl">
+          <i class="fas fa-layer-group"></i>
+          <span>MERN Stack</span>
+        </div>
+        <div class="float-badge float-badge--br">
+          <i class="fas fa-graduation-cap"></i>
+          <span>BS CS 2026</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- Marquee text background -->
+    <div class="marquee-bg" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Developer &nbsp;&bull;&nbsp; Designer &nbsp;&bull;&nbsp; MERN Stack &nbsp;&bull;&nbsp; Django &nbsp;&bull;&nbsp; Firebase &nbsp;&bull;&nbsp; React &nbsp;&bull;&nbsp; </span>
+        <span>Developer &nbsp;&bull;&nbsp; Designer &nbsp;&bull;&nbsp; MERN Stack &nbsp;&bull;&nbsp; Django &nbsp;&bull;&nbsp; Firebase &nbsp;&bull;&nbsp; React &nbsp;&bull;&nbsp; </span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section-gap" id="about">
+    <div class="container">
+
+      <div class="about-grid">
+        <!-- Left: image -->
+        <div class="about-img-wrap" data-aos="fade-right">
+          <div class="about-thumb">
+            <img src="Image/latifkhan image.jpg" alt="Latif Khan" />
+          </div>
+          <!-- Stats bubble -->
+          <div class="about-stat about-stat--left">
+            <strong>3+</strong>
+            <span>Years Coding</span>
+          </div>
+          <div class="about-stat about-stat--right">
+            <strong>10+</strong>
+            <span>Projects</span>
+          </div>
+        </div>
+
+        <!-- Right: content -->
+        <div class="about-content" data-aos="fade-left">
+          <div class="section-header">
+            <div class="tmp-fsb"><span class="subtitle">About Me</span></div>
+            <h2 class="section-title">Computer Science Student &amp; Full Stack Developer</h2>
+          </div>
+
+          <p class="about-desc">
+            I'm <strong>Latif Khan</strong>, a final-year BS Computer Science student at
+            Edwardes College Peshawar (2022–2026). I specialize in the MERN stack and Django,
+            building clean, responsive web applications. I also leverage AI-assisted development
+            to ship features faster and more reliably.
+          </p>
+
+          <!-- Contact info -->
+          <div class="about-info-list">
+            <div class="about-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Nowshera Akora Khattak, Pakistan</span>
             </div>
+            <div class="about-info-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:teefa9263@gmail.com">teefa9263@gmail.com</a>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+923140972728">+92 314 0972728</a>
+            </div>
+            <div class="about-info-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Latifkhan-cyber" target="_blank">github.com/Latifkhan-cyber</a>
+            </div>
+          </div>
+
+          <a href="#contact" class="tmp-btn">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          <a href="Image/latif_khan_cv.pdf.pdf" download="Latif-Khan-CV.pdf" class="tmp-btn btn-cv" style="margin-top:12px;">
+            Download CV <i class="fas fa-file-download"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section-gap section-dark" id="skills">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="tmp-fsb mx-auto"><span class="subtitle">My Skills</span></div>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-desc">Technologies and tools I work with on a daily basis.</p>
+      </div>
+
+      <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <span>React</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+          <span>Node.js</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <span>MongoDB</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <span>Django</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fas fa-fire"></i></div>
+          <span>Firebase</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+          <span>Git / GitHub</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fas fa-robot"></i></div>
+          <span>AI Dev</span>
+        </div>
+        <div class="skill-card invonhover">
+          <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+          <span>Responsive UI</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section-gap" id="services">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="tmp-fsb mx-auto"><span class="subtitle">What I Do</span></div>
+        <h2 class="section-title">Services I Offer</h2>
+        <p class="section-desc">End-to-end development from idea to deployment.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-box invonhover" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Pixel-perfect, responsive UIs built with React, HTML5, CSS3, and vanilla JavaScript that run fast on all devices.</p>
+          <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-box invonhover" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon-wrap"><i class="fas fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <p>Robust REST APIs and server-side logic with Node.js/Express, Django, MySQL, and MongoDB.</p>
+          <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-box invonhover" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-icon-wrap"><i class="fas fa-cubes"></i></div>
+          <h3>MERN Stack Apps</h3>
+          <p>Full-stack applications with MongoDB, Express, React, and Node.js — from auth to deployment.</p>
+          <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-box invonhover" data-aos="fade-up" data-aos-delay="240">
+          <div class="service-icon-wrap"><i class="fas fa-fire-alt"></i></div>
+          <h3>Firebase Integration</h3>
+          <p>Real-time databases, authentication, and cloud functions with Google Firebase.</p>
+          <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-box invonhover" data-aos="fade-up" data-aos-delay="320">
+          <div class="service-icon-wrap"><i class="fas fa-paint-brush"></i></div>
+          <h3>UI / UX Design</h3>
+          <p>Clean, modern interfaces with a focus on user experience, accessibility, and visual hierarchy.</p>
+          <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-box invonhover" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon-wrap"><i class="fas fa-plug"></i></div>
+          <h3>API Integration</h3>
+          <p>Connecting third-party services, payment gateways, maps, and data APIs into your application.</p>
+          <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section-gap section-dark" id="projects">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="tmp-fsb mx-auto"><span class="subtitle">Portfolio</span></div>
+        <h2 class="section-title">Things I've Built</h2>
+        <p class="section-desc">A selection of real-world projects from my work.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-thumb">
+            <div class="project-thumb-inner project-thumb--blue">
+              <i class="fas fa-hospital-alt"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-overlay-btn">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags-row">
+              <span class="project-tag">Django</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h3 class="project-title">MediQueue</h3>
+            <p class="project-desc">Healthcare management system with role-based access for admin, doctor &amp; receptionist, patient queueing, lab ordering, and notifications. Final Year Project.</p>
+            <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-thumb">
+            <div class="project-thumb-inner project-thumb--green">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-overlay-btn">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags-row">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Real Estate Agency Site</h3>
+            <p class="project-desc">Premium real estate landing page with property listings, services, pricing, and contact form. Fully responsive with smooth scroll animations.</p>
+            <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-thumb">
+            <div class="project-thumb-inner project-thumb--orange">
+              <i class="fas fa-couch"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-overlay-btn">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags-row">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Furniture Store</h3>
+            <p class="project-desc">Modern furniture e-commerce storefront with category browsing, product showcase, and newsletter signup. Black + orange-yellow theme.</p>
+            <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top:3rem;" data-aos="fade-up">
+        <a href="https://github.com/Latifkhan-cyber" target="_blank" class="tmp-btn btn-border">
+          See All Projects <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUNFACTS ===== -->
+  <section class="section-gap funfacts-section">
+    <div class="container">
+      <div class="funfacts-grid">
+        <div class="funfact-item" data-aos="zoom-in" data-aos-delay="0">
+          <h2 class="funfact-num" data-count="3">0</h2>
+          <p>Years of Experience</p>
+        </div>
+        <div class="funfact-item" data-aos="zoom-in" data-aos-delay="100">
+          <h2 class="funfact-num" data-count="10">0</h2>
+          <p>Projects Completed</p>
+        </div>
+        <div class="funfact-item" data-aos="zoom-in" data-aos-delay="200">
+          <h2 class="funfact-num" data-count="5">0</h2>
+          <p>Technologies Mastered</p>
+        </div>
+        <div class="funfact-item" data-aos="zoom-in" data-aos-delay="300">
+          <h2 class="funfact-num" data-count="100">0</h2>
+          <p>% Commitment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section-gap section-dark" id="contact">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="tmp-fsb mx-auto"><span class="subtitle">Get In Touch</span></div>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-desc">Available for freelance, internships, and full-time roles.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div class="contact-info-col" data-aos="fade-right">
+
+          <div class="contact-info-card invonhover">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>Nowshera Akora Khattak, Pakistan</p>
+              <a class="ci-link" href="https://www.google.com/maps/search/?api=1&query=Nowshera+Akora+Khattak+Pakistan" target="_blank">
+                Open in Maps <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-card invonhover">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:teefa9263@gmail.com">teefa9263@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card invonhover">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+923140972728">+92 314 0972728</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card invonhover">
+            <div class="ci-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/Latifkhan-cyber" target="_blank">github.com/Latifkhan-cyber</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card invonhover">
+            <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/latif-khan" target="_blank">linkedin.com/in/latif-khan</a>
+            </div>
+          </div>
+
+          <!-- WhatsApp direct link -->
+          <a href="https://wa.me/923140972728?text=Hi%20Latif!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+             target="_blank" class="whatsapp-btn invonhover">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <span class="wa-label">Chat on WhatsApp</span>
+              <span class="wa-sub">Click to open directly</span>
+            </div>
+          </a>
 
         </div>
 
-        <!-- Right Side -->
-
-        <div class="right">
-
-            <div class="glass-card">
-
-                <h2>What I Do</h2>
-
-                <ul>
-                    <li>Responsive Website Design</li>
-                    <li>Frontend Development</li>
-                    <li>MERN Stack Development</li>
-                    <li>Django & MySQL Backends</li>
-                    <li>Firebase Integration</li>
-                    <li>UI / UX Design</li>
-                    <li>API Integration</li>
-                </ul>
-
+        <!-- Right: form -->
+        <div class="contact-form-col" data-aos="fade-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="cname">Your Name</label>
+              <input type="text" id="cname" name="from_name" required placeholder="Enter your name" />
             </div>
-
+            <div class="form-group">
+              <label for="cemail">Email Address</label>
+              <input type="email" id="cemail" name="reply_to" required placeholder="Enter your email" />
+            </div>
+            <div class="form-group">
+              <label for="csubject">Subject</label>
+              <input type="text" id="csubject" name="subject" placeholder="How can I help?" />
+            </div>
+            <div class="form-group">
+              <label for="cmsg">Message</label>
+              <textarea id="cmsg" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="tmp-btn form-submit-btn" id="submitBtn">
+              <span id="btnText">Send Message</span>
+              <i class="fas fa-paper-plane" id="btnIcon"></i>
+            </button>
+          </form>
         </div>
 
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ================= About Section ================= -->
-
-    <section class="about" id="about">
-        <div class="about-inner">
-            <div class="about-text">
-                <p class="small-title">ABOUT ME</p>
-                <h2>Computer Science Student & Full Stack Developer</h2>
-                <p class="about-desc">
-                    I'm Latif Khan, a final-year BS Computer Science student at
-                    Edwardes College Peshawar (2022–2026). I specialize in the
-                    MERN stack and Django, building clean, responsive web
-                    applications. I also use AI-assisted development to ship
-                    features faster and more reliably.
-                </p>
-
-                <div class="about-facts">
-                    <div class="fact">
-                        <span class="fact-num">2026</span>
-                        <span class="fact-label">Graduating</span>
-                    </div>
-                    <div class="fact">
-                        <span class="fact-num">MERN</span>
-                        <span class="fact-label">Stack</span>
-                    </div>
-                    <div class="fact">
-                        <span class="fact-num">Django</span>
-                        <span class="fact-label">+ MySQL</span>
-                    </div>
-                </div>
-
-                <div class="about-contact">
-                    <p><i class="fas fa-map-marker-alt"></i> Nowshera Akora Khattak, Pakistan</p>
-                    <p><i class="fas fa-envelope"></i> teefa9263@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> 03140972728</p>
-                </div>
-            </div>
-
-            <div class="about-skills">
-                <h3>Technical Skills</h3>
-                <div class="skill-row">
-                    <span class="skill-chip">HTML5</span>
-                    <span class="skill-chip">CSS3</span>
-                    <span class="skill-chip">JavaScript</span>
-                    <span class="skill-chip">React</span>
-                    <span class="skill-chip">Node.js</span>
-                    <span class="skill-chip">MongoDB</span>
-                </div>
-                <div class="skill-row">
-                    <span class="skill-chip">Django</span>
-                    <span class="skill-chip">MySQL</span>
-                    <span class="skill-chip">MERN Stack</span>
-                    <span class="skill-chip">Firebase</span>
-                    <span class="skill-chip">Git / GitHub</span>
-                </div>
-                <div class="skill-row">
-                    <span class="skill-chip">AI-Assisted Development</span>
-                    <span class="skill-chip">Responsive Design</span>
-                    <span class="skill-chip">UI / UX</span>
-                    <span class="skill-chip">API Integration</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= Projects Section ================= -->
-
-    <section class="projects" id="projects">
-        <div class="projects-inner">
-            <p class="small-title">PROJECTS</p>
-            <h2>Things I've Built</h2>
-
-            <div class="project-grid">
-
-                <div class="project-card">
-                    <div class="project-badge">Final Year Project</div>
-                    <h3>MediQueue — Healthcare Management System</h3>
-                    <p>
-                        Clinic management system built with Django + MySQL.
-                        Role-based access for admin, doctor and receptionist,
-                        patient queueing, lab test ordering, and notifications.
-                    </p>
-                    <div class="project-tags">
-                        <span>Django</span><span>MySQL</span><span>Python</span>
-                    </div>
-                    <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-badge">Web App</div>
-                    <h3>Real Estate Agency Site</h3>
-                    <p>
-                        Premium real estate landing page with property listings,
-                        services, pricing and contact form. Built with HTML, CSS
-                        and vanilla JavaScript.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                    </div>
-                    <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-badge">Web App</div>
-                    <h3>Furniture Store</h3>
-                    <p>
-                        Modern furniture e-commerce storefront with category
-                        browse, product showcase and newsletter signup.
-                        Black + orange-yellow theme.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                    </div>
-                    <a href="https://github.com/Latifkhan-cyber" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= Contact Section ================= -->
-
-    <section class="contact" id="contact">
-        <div class="contact-inner">
-            <p class="small-title">GET IN TOUCH</p>
-            <h2>Contact & Location</h2>
-            <p class="contact-sub">Available for freelance, internships and full-time roles.</p>
-
-            <div class="contact-grid">
-
-                <!-- Left: details + map -->
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Nowshera Akora Khattak, Pakistan</p>
-                            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Nowshera+Akora+Khattak+Pakistan" target="_blank">
-                                Open in Google Maps <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:teefa9263@gmail.com">teefa9263@gmail.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:03140972728">03140972728</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h4>GitHub</h4>
-                            <p><a href="https://github.com/Latifkhan-cyber" target="_blank">github.com/Latifkhan-cyber</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fab fa-linkedin-in"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <p><a href="https://www.linkedin.com/in/latif-khan" target="_blank">linkedin.com/in/latif-khan</a></p>
-                        </div>
-                    </div>
-
-                    <!-- Embedded Google Map (shareable location) -->
-                    <div class="map-embed">
-                        <iframe
-                            title="My Location"
-                            src="https://www.google.com/maps?q=Nowshera+Akora+Khattak+Pakistan&output=embed"
-                            width="100%" height="260" style="border:0; border-radius:16px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Right: message form -->
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! I will get back to you soon.'); this.reset();">
-                    <div class="form-group">
-                        <label for="cname">Your Name</label>
-                        <input type="text" id="cname" required placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="cemail">Email</label>
-                        <input type="email" id="cemail" required placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="cmsg">Message</label>
-                        <textarea id="cmsg" rows="5" required placeholder="How can I help you?"></textarea>
-                    </div>
-                    <button type="submit" class="btn1">Send Message</button>
-                </form>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= Footer ================= -->
-
-    <footer class="site-footer">
-        <p>© 2026 Latif Khan. Built with HTML, CSS & JavaScript.</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">Latif<span>.</span></a>
+        <p class="footer-tagline">Building digital experiences with code &amp; creativity.</p>
         <div class="footer-social">
-            <a href="https://github.com/Latifkhan-cyber" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/latif-khan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:teefa9263@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/Latifkhan-cyber" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/latif-khan" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:teefa9263@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
-    </footer>
+      </div>
 
-    <!-- ================= JavaScript ================= -->
-    <!-- Our interactivity file (smooth scroll, form, navbar) -->
-    <script src="script.js"></script>
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Latif Khan. Built with HTML, CSS &amp; JavaScript.</p>
+        <p>Inspired by <a href="https://html.inversweb.com/biohub/designer.html" target="_blank">Biohub Designer</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923140972728?text=Hi%20Latif!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+     target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
 </body>
 </html>
