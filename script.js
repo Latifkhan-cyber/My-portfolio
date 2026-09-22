@@ -86,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ── 6. TYPED TEXT EFFECT ── */
   const typedEl = document.getElementById('typed-text');
   const roles = [
-    'React Applications.',
-    'MERN Stack Apps.',
-    'Django Backends.',
-    'Firebase Projects.',
-    'Responsive UIs.',
-    'REST APIs.',
+    'React.js Applications.',
+    'Full-Stack MERN Apps.',
+    'Node.js & Express APIs.',
+    'Firebase & Supabase Apps.',
+    'Cloud-Native Solutions.',
+    'Responsive Web Platforms.',
   ];
   let roleIndex  = 0;
   let charIndex  = 0;
