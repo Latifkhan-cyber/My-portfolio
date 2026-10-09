@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Latif Khan - Full-Stack Developer CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      background: #ffffff;
+      color: #1e293b;
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .cv-page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 12mm 15mm 10mm 15mm;
+      margin: 0 auto;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    /* Top accent bar */
+    .top-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #0284c7, #2563eb, #7c3aed);
+    }
+
+    /* Header */
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 9px;
+      border-bottom: 1.5px solid #e2e8f0;
+      margin-bottom: 9px;
+    }
+    .header-left {
+      flex: 1.1;
+    }
+    .name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.4px;
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+    .title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #0284c7;
+      letter-spacing: 0.2px;
+      margin-bottom: 6px;
+    }
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 6px;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-size: 8.5px;
+      font-weight: 600;
+      border-radius: 3px;
+    }
+
+    /* Contact details grid */
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+      text-align: right;
+      font-size: 9px;
+      color: #475569;
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+    .contact-item i {
+      color: #0284c7;
+      width: 11px;
+      text-align: center;
+      font-size: 9.5px;
+    }
+    .contact-item a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 6px;
+    }
+    .section-title i {
+      color: #0284c7;
+      font-size: 10.5px;
+    }
+
+    /* Summary */
+    .summary-text {
+      color: #334155;
+      font-size: 9.5px;
+      line-height: 1.42;
+      text-align: justify;
+    }
+    .summary-text strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Skills Grid */
+    .skills-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 12px;
+      background: #f8fafc;
+      padding: 6px 9px;
+      border-radius: 5px;
+      border: 1px solid #e2e8f0;
+    }
+    .skill-cat {
+      font-size: 9px;
+      line-height: 1.35;
+    }
+    .skill-cat-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .skill-cat-items {
+      color: #475569;
+    }
+
+    /* Experience & Projects Items */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-company {
+      font-size: 10px;
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .item-date {
+      font-size: 9px;
+      font-weight: 600;
+      color: #64748b;
+    }
+    
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2.5px;
+      font-size: 9.2px;
+      color: #334155;
+      line-height: 1.35;
+    }
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 1px;
+      color: #0284c7;
+      font-weight: bold;
+      font-size: 10px;
+    }
+
+    /* Projects Grid */
+    .projects-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .project-entry {
+      padding: 5px 7px;
+      background: #f8fafc;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+    .project-entry-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+    .project-name {
+      font-size: 9.8px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .project-tech {
+      font-size: 8px;
+      font-weight: 600;
+      color: #0284c7;
+      background: #e0f2fe;
+      padding: 1px 4px;
+      border-radius: 2px;
+    }
+    .project-desc {
+      font-size: 8.8px;
+      color: #475569;
+      line-height: 1.3;
+    }
+    .project-link-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      font-size: 8.5px;
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Multi-column layout for Education / Certs / Languages */
+    .two-col-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 12px;
+    }
+
+    .edu-cert-entry {
+      margin-bottom: 4px;
+    }
+    .edu-cert-title {
+      font-size: 9.8px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-cert-sub {
+      font-size: 8.8px;
+      color: #475569;
+    }
+    .edu-cert-date {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #64748b;
+    }
+    
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.8px;
+      margin-bottom: 2px;
+      color: #334155;
+    }
+    .lang-name {
+      font-weight: 600;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-page">
+    <div class="top-accent"></div>
+
+    <!-- MAIN BODY WRAPPER -->
+    <div>
+      <!-- HEADER -->
+      <header class="cv-header">
+        <div class="header-left">
+          <h1 class="name">Latif Khan</h1>
+          <div class="title">Full-Stack JavaScript Developer &bull; AI-Assisted Engineer</div>
+          <div class="badges-row">
+            <span class="badge"><i class="fas fa-certificate"></i> IBM Certified Full-Stack</span>
+            <span class="badge"><i class="fas fa-graduation-cap"></i> BS Computer Science (2026)</span>
+            <span class="badge"><i class="fas fa-code-branch"></i> 8+ Production Platforms</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="contact-item">
+            <a href="mailto:teefa9263@gmail.com">teefa9263@gmail.com</a>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-item">
+            <span>(+92) 331 9292320 &bull; WhatsApp: 0314 0972728</span>
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-item">
+            <a href="https://github.com/Latifkhan-cyber" target="_blank">github.com/Latifkhan-cyber</a>
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-item">
+            <a href="https://linkedin.com/in/latif-khan" target="_blank">linkedin.com/in/latif-khan</a>
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-item">
+            <a href="https://my-portfolio-ochre-ten-93.vercel.app" target="_blank">my-portfolio-ochre-ten-93.vercel.app</a>
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="contact-item">
+            <span>Nowshera / Peshawar, Pakistan</span>
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- PROFESSIONAL SUMMARY -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-user-tie"></i> Professional Summary</h2>
+        <p class="summary-text">
+          <strong>IBM Certified Full-Stack JavaScript Developer</strong> and Computer Science graduate specializing in engineering production-ready web platforms with <strong>React.js, Node.js, Express.js, MongoDB, Supabase, and Firebase</strong>. Skilled at combining core software engineering principles with state-of-the-art AI pair-programming toolchains (Claude, ChatGPT, Gemini, Cursor) to accelerate full-lifecycle delivery—from architecture and secure REST APIs to responsive UI/UX and containerized cloud deployments on Vercel and Render. Proven record delivering <strong>8+ live web applications</strong> across healthcare, pharmacy, real estate, and commerce domains.
+        </p>
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-tools"></i> Technical Expertise</h2>
+        <div class="skills-block">
+          <div class="skill-cat">
+            <span class="skill-cat-title">Frontend: </span>
+            <span class="skill-cat-items">React.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Responsive UI</span>
+          </div>
+          <div class="skill-cat">
+            <span class="skill-cat-title">Backend & APIs: </span>
+            <span class="skill-cat-items">Node.js, Express.js, RESTful Architecture, RBAC Security, JWT Authentication</span>
+          </div>
+          <div class="skill-cat">
+            <span class="skill-cat-title">Databases & Cloud: </span>
+            <span class="skill-cat-items">MongoDB, Supabase, Firebase (Firestore/Auth/Hosting), Docker, Vercel, Render</span>
+          </div>
+          <div class="skill-cat">
+            <span class="skill-cat-title">AI & Tools: </span>
+            <span class="skill-cat-items">AI Prompt Engineering, Cursor, Git, GitHub, Postman, Code Review, Debugging</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div>
+          <div class="item-header">
+            <div>
+              <span class="item-title">Full-Stack Web Developer</span>
+              <span class="item-company">&bull; Freelance &amp; Client Projects</span>
+            </div>
+            <span class="item-date">2026 – Present</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Architected, developed, and deployed <strong>8+ production-ready web applications</strong> across healthcare, pharmacy, real estate, and commerce sectors on Vercel and Render.</li>
+            <li>Engineered scalable backend RESTful microservices with <strong>Node.js, Express.js, and MongoDB / Supabase</strong> incorporating Role-Based Access Control (RBAC) and real-time synchronization.</li>
+            <li>Integrated AI-assisted engineering workflows (Cursor, Claude, Gemini) to enhance developer velocity, eliminate boilerplate, and conduct rigorous code reviews and bug fixing.</li>
+            <li>Built high-converting, mobile-first responsive interfaces in React.js and Tailwind CSS with smooth UX interactions and optimized page-load performance.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-project-diagram"></i> Featured Projects (8+ Production Apps)</h2>
+        <div class="projects-container">
+          
+          <div class="project-entry">
+            <div class="project-entry-top">
+              <span class="project-name">Hospital Management System</span>
+              <span class="project-tech">React &bull; Node &bull; Express &bull; MongoDB</span>
+            </div>
+            <p class="project-desc">
+              Healthcare platform with dedicated portals for patients, doctors, and admins. Includes appointment booking, live token queues, digital medical record storage, and MongoDB RBAC security.
+            </p>
+          </div>
+
+          <div class="project-entry">
+            <div class="project-entry-top">
+              <span class="project-name">Pharmacy Management &amp; Wholesale</span>
+              <span class="project-tech">React &bull; Node &bull; Express &bull; Supabase</span>
+            </div>
+            <p class="project-desc">
+              Comprehensive pharmacy portal with real-time inventory management, batch tracking, product catalogs, and automated wholesale order workflows.
+            </p>
+            <a href="https://pharmacy-scv7.vercel.app/" target="_blank" class="project-link-badge"><i class="fas fa-external-link-alt"></i> pharmacy-scv7.vercel.app</a>
+          </div>
+
+          <div class="project-entry">
+            <div class="project-entry-top">
+              <span class="project-name">Real Estate Agency Platform</span>
+              <span class="project-tech">HTML5 &bull; CSS3 &bull; JS &bull; Firebase</span>
+            </div>
+            <p class="project-desc">
+              Property listing application with advanced search filters, real-time Firestore database sync, agent directories, and high-performance responsive layout.
+            </p>
+            <a href="https://real-estate-agency-khaki-tau.vercel.app/" target="_blank" class="project-link-badge"><i class="fas fa-external-link-alt"></i> real-estate-agency-khaki-tau.vercel.app</a>
+          </div>
+
+          <div class="project-entry">
+            <div class="project-entry-top">
+              <span class="project-name">BookMart &amp; Multi-Store E-Commerce</span>
+              <span class="project-tech">HTML5 &bull; CSS3 &bull; JS &bull; Firebase</span>
+            </div>
+            <p class="project-desc">
+              Bookstore with catalog filtering, cart logic &amp; sales tracking. Plus deployed stores: Furniture (<a href="https://furniture-store-three-kohl.vercel.app/" target="_blank" style="color:#0284c7; text-decoration:none;">furniture-store</a>) &amp; Restaurant (<a href="https://resturant-website-six-eta.vercel.app/" target="_blank" style="color:#0284c7; text-decoration:none;">resturant-website</a>).
+            </p>
+            <a href="https://e-commerce-bookmart.vercel.app/" target="_blank" class="project-link-badge"><i class="fas fa-external-link-alt"></i> e-commerce-bookmart.vercel.app</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EDUCATION, CERTIFICATIONS & LANGUAGES -->
+      <div class="two-col-layout">
+        <!-- Education & Certification -->
+        <section class="section" style="margin-bottom:0;">
+          <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education &amp; Certification</h2>
+          
+          <div class="edu-cert-entry">
+            <div class="edu-cert-title">BS in Computer Science (BSCS)</div>
+            <div class="edu-cert-sub">Edwardes College Peshawar <span class="edu-cert-date">[ Expected 2026 ]</span></div>
+          </div>
+
+          <div class="edu-cert-entry">
+            <div class="edu-cert-title">IBM Full-Stack JavaScript Developer</div>
+            <div class="edu-cert-sub">IBM Professional Certificate (Coursera) <span class="edu-cert-date">[ 09/2026 ]</span></div>
+          </div>
+        </section>
+
+        <!-- Languages & Details -->
+        <section class="section" style="margin-bottom:0;">
+          <h2 class="section-title"><i class="fas fa-language"></i> Languages &amp; Details</h2>
+          <div class="lang-item">
+            <span class="lang-name">English</span>
+            <span>Professional Working (C2 Read/Listen, B2 Write)</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Urdu</span>
+            <span>Bilingual / Native Proficiency</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Pashto</span>
+            <span>Native Proficiency</span>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
