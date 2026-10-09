@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const typedEl = document.getElementById('typed-text');
   const roles = [
     'React.js Applications.',
-    'Full-Stack MERN Apps.',
-    'Node.js & Express APIs.',
-    'Firebase & Supabase Apps.',
-    'Cloud-Native Solutions.',
-    'Responsive Web Platforms.',
+    'Full-Stack MERN Platforms.',
+    'AI-Assisted Web Solutions.',
+    'Node.js & Express REST APIs.',
+    'Firebase & Supabase Cloud Apps.',
+    'High-Performance Web Systems.',
   ];
   let roleIndex  = 0;
   let charIndex  = 0;
